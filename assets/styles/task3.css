@@ -1,0 +1,249 @@
+.container {
+    width: 1140px;
+    display: grid;
+    grid-template-areas: 'header header header header'
+        'main main'
+        'main main'
+        'blog blog'
+        'orange-section orange-section'
+        'footer footer footer footer';
+    grid-template-rows: auto;
+    align-items: center;
+    font-family: 'Gilroy-Thin', sans-serif;
+    margin: 0 auto;
+}
+
+.header {
+    background: #FAFAFA;
+    padding-left: 80px;
+    padding-right: 10px;
+}
+
+.logo {
+    margin-top: 39px;
+}
+
+@font-face {
+    font-family: "Gilroy-Thin";
+    src: url("task3/assets/fonts/Gilroy-Thin/Gilroy-Thin.woff2"),
+        url("task3/assets/fonts/Gilroy-Thin/Gilroy-Thin.woff")
+}
+
+.nav {
+    display: grid;
+    grid-template-columns: repeat(5, 10%);
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    justify-content: center;
+}
+
+.search {
+    display: grid;
+    grid-template-columns: 100% 50%;
+    padding-bottom: 20%;
+}
+
+.main {
+    display: grid;
+    background: #F1F1F2;
+    grid-template-columns: 1fr;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    font-family: 'Gilroy-Thin', sans-serif;
+
+}
+
+.content1 {
+    font-size: 56px;
+    height: 206px;
+    width: 433px;
+    left: 162px;
+    top: 154px;
+}
+
+a.link {
+    background-color: #F7941E;
+    border: none;
+    width: 200px;
+    color: white;
+    padding: 20px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 28px;
+    font-family: 'Gilroy-Thin', sans-serif;
+    border-radius: 10px;
+}
+
+p {
+    font-size: 24px;
+}
+
+.content2 {
+    font-size: 32px;
+    height: 169px;
+    width: 441px;
+    left: 833px;
+    top: 232px;
+    border-radius: nullpx;
+}
+
+.gift-content {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 1fr 1fr;
+    gap: 20px;
+    font-family: sans-serif;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+.card-topic {
+    display: grid;
+    grid-template-columns: 2fr;
+
+}
+
+.card__content {
+    line-height: 1.5;
+    font-size: 0.9em;
+    padding: 15px;
+    background: #FFFFFF;
+}
+
+.card__info i {
+    font-size: 0.9em;
+    margin-right: 8px;
+}
+
+h1 {
+    font-size: 56px;
+    font-family: 'Gilroy-Thin', sans-serif;
+}
+
+h2 {
+    font-size: 24px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 32px;
+    text-align: center;
+}
+
+h4 {
+    font-size: 46px;
+    color: white;
+}
+
+.content3 {
+    text-align: center;
+}
+
+#fig1,
+#fig2 {
+    height: 700px;
+    width: 750px;
+}
+
+.orange-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    background-color: #F7941E;
+    width: 100%;
+    height: 240px;
+    text-align: center;
+}
+
+.orange-sec1 {
+    align-self: center;
+}
+
+.orange-sec2 {
+    align-self: center;
+}
+
+.blog {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+.blog-content1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    background: black;
+    color: white;
+    height: 370px;
+    width: 1170px;
+    margin-left: 30px;
+}
+
+.blog-content1-p {
+    margin-left: 400px;
+}
+
+.blog-content1-title {
+    margin-left: 400px;
+}
+
+.blog-content1-link {
+    color: white;
+    font-size: 20px;
+    Width: 100px;
+    Height: 26px;
+    margin-left: 100px;
+    margin-left: 400px;
+}
+
+.blog-content2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #FFFFFF;
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+
+.blog-content-block1 {
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+    Width: 570px;
+    Height: 290px;
+    margin-left: 30px;
+}
+
+.footer {
+    background: #FAFAFA;
+}
+
+.fig7 {
+    position: absolute;
+    width: 400px;
+    height: 370px;
+    margin-left: 150px;
+}
+
+.footer-links {
+    list-style-type: none;
+    font-size: 14px;
+    text-align: center;
+}
+
+.footer-links li {
+    display: inline;
+    font-family: 'Gilroy-Thin', sans-serif;
+}
+
+.footer-bottom-social {
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(5, 10%);
+    justify-content: center;
+}

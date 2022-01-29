@@ -1,12 +1,11 @@
 .container {
-    width: 1140px;
     display: grid;
-    grid-template-areas: 'header header header header'
-        'main main'
-        'main main'
-        'blog blog'
-        'orange-section orange-section'
-        'footer footer footer footer';
+    grid-template-areas:
+        "header header header header"
+        "main main main"
+        "orange-section  orange-section orange-section"
+        "blog blog blog"
+        "footer-main footer-main footer-main";
     grid-template-rows: auto;
     align-items: center;
     font-family: 'Gilroy-Thin', sans-serif;
@@ -56,21 +55,17 @@
     grid-template-rows: 1fr 1fr;
     justify-items: center;
     font-family: 'Gilroy-Thin', sans-serif;
-
 }
 
 .content1 {
     font-size: 56px;
-    height: 206px;
-    width: 433px;
-    left: 162px;
-    top: 154px;
+    width: 50%;
 }
 
 a.link {
     background-color: #F7941E;
     border: none;
-    width: 200px;
+    width: 50%;
     color: white;
     padding: 20px 28px;
     text-align: center;
@@ -87,11 +82,7 @@ p {
 
 .content2 {
     font-size: 32px;
-    height: 169px;
-    width: 441px;
-    left: 833px;
-    top: 232px;
-    border-radius: nullpx;
+    width: 50%;
 }
 
 .gift-content {
@@ -99,10 +90,10 @@ p {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 1fr 1fr;
-    gap: 20px;
-    font-family: sans-serif;
+    gap: 3%;
     padding-top: 10px;
     padding-bottom: 30px;
+    justify-content: center;
 }
 
 .card-topic {
@@ -149,8 +140,8 @@ h4 {
 
 #fig1,
 #fig2 {
-    height: 700px;
-    width: 750px;
+    height: 100%;
+    width: 100%;
 }
 
 .orange-section {
@@ -163,10 +154,7 @@ h4 {
     text-align: center;
 }
 
-.orange-sec1 {
-    align-self: center;
-}
-
+.orange-sec1,
 .orange-sec2 {
     align-self: center;
 }
@@ -174,49 +162,50 @@ h4 {
 .blog {
     display: grid;
     grid-template-columns: 1fr;
-    justify-items: center;
+    grid-template-rows: 1fr;
 }
 
 .blog-content1 {
-    display: grid;
-    grid-template-columns: 1fr;
     background: black;
     color: white;
-    height: 370px;
-    width: 1170px;
-    margin-left: 30px;
+    height: 140px;
+    width: 80%;
+    padding-bottom: 10%;
+    align-items: center;
+    margin-left: 10%;
 }
 
 .blog-content1-p {
-    margin-left: 400px;
+    margin-left: 30%;
+    height: 20px;
+    margin-top: -15%;
 }
 
 .blog-content1-title {
-    margin-left: 400px;
+    margin-left: 30%;
+    height: 20%20px;
 }
 
 .blog-content1-link {
     color: white;
     font-size: 20px;
-    Width: 100px;
-    Height: 26px;
-    margin-left: 100px;
-    margin-left: 400px;
+    margin-left: 30%;
+    height: 10px;
 }
 
 .blog-content2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     background: #FFFFFF;
-    padding-top: 40px;
-    padding-bottom: 80px;
+    padding-top: 5%;
+    padding-bottom: 15%;
 }
 
 .blog-content-block1 {
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
-    Width: 570px;
-    Height: 290px;
-    margin-left: 30px;
+    Width: 70%;
+    Height: 100%;
+    margin-left: 10%;
 }
 
 .footer {
@@ -224,10 +213,8 @@ h4 {
 }
 
 .fig7 {
-    position: absolute;
     width: 400px;
     height: 370px;
-    margin-left: 150px;
 }
 
 .footer-links {
@@ -246,4 +233,173 @@ h4 {
     text-align: center;
     grid-template-columns: repeat(5, 10%);
     justify-content: center;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .main-content {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    #fig1,
+    #fig2 {
+        height: 100%;
+        width: 100%;
+    }
+
+    .gift-content {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .card-topic {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .blog {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .blog-content2 {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        padding-left: 10px;
+        padding-right: 10px;
+        gap: 10px;
+    }
+
+    .nav {
+        grid-template-columns: repeat(3, 20%);
+        font-size: 12px;
+    }
+
+    .main-content {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    #fig1,
+    #fig2 {
+        height: 50%;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    h4 {
+        font-size: 28px;
+        color: white;
+    }
+
+    .gift-content {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    .card-topic {
+        grid-template-columns: 1fr;
+    }
+
+    .blog {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .blog-content2 {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 10px;
+    }
+}
+
+@media (max-width: 409px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        padding-left: 10px;
+        padding-right: 10px;
+        gap: 10px;
+    }
+
+    .nav {
+        grid-template-columns: repeat(2, 20%);
+        font-size: 12px;
+    }
+
+    .main-content {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    #fig1,
+    #fig2 {
+        height: 50%;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    h4 {
+        font-size: 28px;
+        color: white;
+    }
+
+    .gift-content {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    .card-topic {
+        grid-template-columns: 1fr;
+    }
+
+    .blog {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .blog-content2 {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 10px;
+    }
 }
